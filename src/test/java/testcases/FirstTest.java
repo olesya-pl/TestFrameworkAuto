@@ -10,7 +10,5 @@ public class FirstTest {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\opylypiv\\IdeaProjects\\TestAutomationFramework\\src\\test\\resources\\executables\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
         driver.get("https://mvnrepository.com/");
-        driver.manage().window().maximize();
-        driver.close();
     }
 }
