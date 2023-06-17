@@ -51,9 +51,9 @@ public class FirstTest {
         driver.get("http://test.my-fork.com/");
         driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
         Thread.sleep(1000);
-        System.out.println(driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Email ']//input")).isDisplayed());
-        System.out.println(driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).isDisplayed());
-        System.out.println(driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[@id='loginButton']//button")).isDisplayed());
+        System.out.println(driver.findElement(By.xpath("//input[@id='email']")).isDisplayed());
+        System.out.println(driver.findElement(By.xpath("//input[@id='password']")).isDisplayed());
+        System.out.println(driver.findElement(By.xpath("//div[@id='loginButton']")).isDisplayed());
     }
     @Test
     public void fillEmailAndPasswordFiells() throws InterruptedException {
@@ -64,9 +64,9 @@ public class FirstTest {
         driver.get("http://test.my-fork.com/");
         driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Email ']//input")).sendKeys("email@ukr.net");
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys("password");
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[@id='loginButton']//button")).submit();
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys("email@ukr.net");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("password");
+        driver.findElement(By.xpath("//div[@id='loginButton']")).submit();
     }
     @Test
     public void fillEmailAndPasswordFiellsAndValidateError() throws InterruptedException {
@@ -77,9 +77,9 @@ public class FirstTest {
         driver.get("http://test.my-fork.com/");
         driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Email ']//input")).sendKeys("email@ukr.net");
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys("password");
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//input[@id='email']")).sendKeys("email@ukr.net");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("password");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(Keys.ENTER);
         Thread.sleep(5000);
         System.out.println(driver.findElement(By.xpath("//div[@class='auth-page-main-block']//div[@class='test-login-errors']//p[text()='Error: email is incorrect']")).isDisplayed());
     }
