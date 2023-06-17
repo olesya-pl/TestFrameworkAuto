@@ -69,19 +69,6 @@ public class FirstTest {
         driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[@id='loginButton']//button")).submit();
     }
     @Test
-    public void fillEmailAndPasswordFiellsAndPressEnter() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\opylypiv\\Desktop\\TestFrameworkAuto\\src\\test\\resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.get("http://test.my-fork.com/");
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Email ']//input")).sendKeys("email@ukr.net");
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys("password");
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys(Keys.ENTER);
-    }
-    @Test
     public void fillEmailAndPasswordFiellsAndValidateError() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\opylypiv\\Desktop\\TestFrameworkAuto\\src\\test\\resources\\executables\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
@@ -116,17 +103,4 @@ public class FirstTest {
         driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
         System.out.print(driver.findElement(By.xpath("//div[@class='form-row auth-page-remember-me-row']//div[text()='Remember Me']")).getText());
     }
-    @Test
-    public void isEnabled() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\opylypiv\\Desktop\\TestFrameworkAuto\\src\\test\\resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.get("https://secure.bankofamerica.com/secure-mycommunications/public/appointments/?marketingCode=NEWHP_ECHMPG");
-        driver.findElement(By.xpath("//h3[text()='Everyday Banking']")).click();
-        Thread.sleep(3000);
-        System.out.println(driver.findElement(By.cssSelector("button.topicSpartaUILayerClose")).isEnabled());
-        System.out.println(driver.findElement(By.cssSelector("button.nextBtnSubTopics")).isEnabled());
-    }
-
 }
