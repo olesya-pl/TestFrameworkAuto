@@ -40,7 +40,7 @@ public class FirstTest {
         options.addArguments("--remote-allow-origins=*");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://test.my-fork.com/");
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        driver.findElement(By.xpath("//div[@id='log-in-button']")).click();
     }
     @Test
     public void fillEmailAndPasswordAndLogginButtonAreDisplayed() throws InterruptedException {
@@ -49,7 +49,7 @@ public class FirstTest {
         options.addArguments("--remote-allow-origins=*");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://test.my-fork.com/");
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        driver.findElement(By.xpath("//div[@id='log-in-button']")).click();
         Thread.sleep(1000);
         System.out.println(driver.findElement(By.xpath("//input[@id='email']")).isDisplayed());
         System.out.println(driver.findElement(By.xpath("//input[@id='password']")).isDisplayed());
@@ -62,7 +62,7 @@ public class FirstTest {
         options.addArguments("--remote-allow-origins=*");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://test.my-fork.com/");
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        driver.findElement(By.xpath("//div[@id='log-in-button']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys("email@ukr.net");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("password");
@@ -75,7 +75,7 @@ public class FirstTest {
         options.addArguments("--remote-allow-origins=*");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://test.my-fork.com/");
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        driver.findElement(By.xpath("//div[@id='log-in-button']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys("email@ukr.net");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("password");
@@ -90,17 +90,7 @@ public class FirstTest {
         options.addArguments("--remote-allow-origins=*");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://test.my-fork.com/");
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        driver.findElement(By.xpath("//div[@id='log-in-button']")).click();
         System.out.print(driver.findElement(By.id("auth-page-remember-me")).isSelected());
-    }
-    @Test
-    public void verifyCheckboxText() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\opylypiv\\Desktop\\TestFrameworkAuto\\src\\test\\resources\\executables\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        ChromeDriver driver = new ChromeDriver(options);
-        driver.get("http://test.my-fork.com/");
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
-        System.out.print(driver.findElement(By.xpath("//div[@class='form-row auth-page-remember-me-row']//div[text()='Remember Me']")).getText());
     }
 }
