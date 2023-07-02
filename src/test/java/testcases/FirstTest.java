@@ -12,7 +12,10 @@ public class FirstTest {
 
     public ChromeDriver driver;
     protected String webSiteURL = "http://test.my-fork.com/";
-
+    public void signInOnTheSite () {
+        driver.get(webSiteURL);
+        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+    }
 
     @BeforeMethod
     public void setUp (){
@@ -28,14 +31,12 @@ public class FirstTest {
     }
     @Test
     public void openSignInPage() throws InterruptedException {
-        driver.get(webSiteURL);
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        signInOnTheSite ();
     }
 
     @Test
     public void fillEmailAndPasswordAndLogginButtonAreDisplayed() throws InterruptedException {
-        driver.get(webSiteURL);
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        signInOnTheSite ();
         Thread.sleep(1000);
         System.out.println(driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Email ']//input")).isDisplayed());
         System.out.println(driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).isDisplayed());
@@ -45,13 +46,11 @@ public class FirstTest {
     public void  fillInCredentials (String email, String password){
         driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Email ']//input")).sendKeys("email@ukr.net");
         driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys("password");
-
     }
 
     @Test
     public void fillEmailAndPasswordFiells() throws InterruptedException {
-        driver.get(webSiteURL);
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        signInOnTheSite ();
         Thread.sleep(1000);
         fillInCredentials ("1222@gmail.com", "123554788");
         driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[@id='loginButton']//button")).submit();
@@ -59,8 +58,7 @@ public class FirstTest {
 
     @Test
     public void fillEmailAndPasswordFiellsAndPressEnter() throws InterruptedException {
-        driver.get(webSiteURL);
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        signInOnTheSite ();
         Thread.sleep(1000);
         fillInCredentials ("18pikm@gmail.com", "adfggh");
         driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys(Keys.ENTER);
@@ -68,11 +66,9 @@ public class FirstTest {
 
     @Test
     public void fillEmailAndPasswordFiellsAndValidateError() throws InterruptedException {
-        driver.get(webSiteURL);
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        signInOnTheSite ();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Email ']//input")).sendKeys("email@ukr.net");
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys("password");
+        fillInCredentials ("wiki@gmail.com", "a714587");
         driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys(Keys.ENTER);
         Thread.sleep(5000);
         System.out.println(driver.findElement(By.xpath("//div[@class='auth-page-main-block']//div[@class='test-login-errors']//p[text()='Error: email is incorrect']")).isDisplayed());
@@ -80,15 +76,13 @@ public class FirstTest {
 
     @Test
     public void fillEmailAndPasswordFiellsAndValidateCheckbox() throws InterruptedException {
-        driver.get(webSiteURL);
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        signInOnTheSite ();
         System.out.print(driver.findElement(By.id("auth-page-remember-me")).isSelected());
     }
 
     @Test
     public void verifyCheckboxText() throws InterruptedException {
-        driver.get(webSiteURL);
-        driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+        signInOnTheSite ();
         System.out.println(driver.findElement(By.xpath("//div[@class='form-row auth-page-remember-me-row']//div[text()='Remember Me']")).getText());
     }
 
@@ -97,7 +91,7 @@ public class FirstTest {
      */
 
     @AfterMethod
-    public void afterMethod() {
+    public void closeBrowser() {
         driver.close();
     }
 
@@ -109,5 +103,4 @@ public class FirstTest {
         System.out.println(driver.findElement(By.cssSelector("button.topicSpartaUILayerClose")).isEnabled());
         System.out.println(driver.findElement(By.cssSelector("button.nextBtnSubTopics")).isEnabled());
     }
-
 }
