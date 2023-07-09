@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class SignInPage extends BaseMain {
+    public String signInForm;
+
     public SignInPage(WebDriver driver){
 
         super(driver);
@@ -18,8 +20,49 @@ public class SignInPage extends BaseMain {
     String emailValue ="email@ukr.net";
     String passwordValue ="password";
 
-    public void fillTheSignInForm(){
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Email ']//input")).sendKeys("email@ukr.net");
-        driver.findElement(By.xpath("//div[@class='auth-page-main-block']//form//div[label='Password ']//input")).sendKeys("password");
+    public String signInForm(String inputEmail, String inputPassword)
+    {
+        if ( inputEmail == "//div[@class='auth-page-main-block']//form//div[label='Email ']//input")
+        {
+        System.out.println(true);}
+        else {
+            System.out.println(false);
+            }
+        if (inputPassword == "//div[@class='auth-page-main-block']//form//div[label='Password ']//input")
+        {
+        System.out.println(true);}
+        else {
+            System.out.println(false);
+            } if (loginButton == "//div[@class='auth-page-main-block']//form//div[@id='loginButton']//button")
+        {
+        System.out.println(true);}
+        else {
+            System.out.println(false);
+            }
+        return signInForm;
     }
+
+    public void fillTheSignInForm(){
+        driver.findElement(By.xpath(inputEmail)).sendKeys(emailValue);
+        driver.findElement(By.xpath(inputPassword)).sendKeys(passwordValue);
+    }
+
+    public void clickLoginBtn(){
+        driver.findElement(By.xpath(loginButton)).click();
+    }
+    public void loginERRIsDisplyed(){
+        System.out.println(driver.findElement(By.xpath(textERR)).isDisplayed());
+    }
+    public void signInFormIsDisplayed(){
+        System.out.println(driver.findElement(By.xpath(inputEmail)).isDisplayed());
+        System.out.println(driver.findElement(By.xpath(inputPassword )).isDisplayed());
+        System.out.println(driver.findElement(By.xpath(loginButton)).isDisplayed());
+    }
+    public void checkboxTextOnTheSignInPageIsDisplayed(){
+        System.out.println(driver.findElement(By.xpath(rememberMeCheckBox)).getText());
+    }
+    public void validateCheckboxOnTheSignInPage(){
+        System.out.print(driver.findElement(By.id(cheskBox)).isSelected());
+    }
+
 }

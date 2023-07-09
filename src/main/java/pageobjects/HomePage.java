@@ -9,12 +9,16 @@ public class HomePage extends BaseMain {
         super(driver);
     }
     //Locators
-    String webSiteURL = "http://test.my-fork.com/";
-    String bankOfAmerica = "https://secure.bankofamerica.com/secure-mycommunications/public/appointments/?marketingCode=NEWHP_ECHMPG";
-    String signInButton = "//div[@class='home-menu-block']//div[@class='menu']//a[2]";
+    public String webSiteURL = "http://test.my-fork.com";
+
+    public String bankOfAmerica = "https://secure.bankofamerica.com/secure-mycommunications/public/appointments/?marketingCode=NEWHP_ECHMPG";
+    public String signInButton = "//div[@class='home-menu-block']//div[@class='menu']//a[2]";
 
      public void clickSignIn () throws InterruptedException{
-            driver.get(webSiteURL);
-            driver.findElement(By.xpath("//div[@class='home-menu-block']//div[@class='menu']//a[2]")).click();
+         openWebSite();;
+         driver.findElement(By.xpath(signInButton)).click();
         }
+    public void openWebSite(){
+        driver.get(webSiteURL);
     }
+}
