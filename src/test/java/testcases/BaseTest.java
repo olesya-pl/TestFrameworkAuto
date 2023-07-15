@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pageobjects.HomePage;
+import pageobjects.RegisterPage;
 import pageobjects.SignInPage;
 
 public class BaseTest {
@@ -14,6 +15,7 @@ public class BaseTest {
     public ChromeDriver driver;
     HomePage homePage;
     SignInPage signInPage;
+    RegisterPage registerPage;
 
     @BeforeMethod
     public void setUp (){
@@ -23,11 +25,11 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         homePage = new HomePage(driver);
         signInPage = new SignInPage(driver);
+        registerPage= new RegisterPage(driver);
     }
 
    @AfterMethod
   public void closeBrowser() {
-
-       driver.close();
+        driver.close();
     }
 }

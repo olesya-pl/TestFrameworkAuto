@@ -3,7 +3,14 @@ package testcases;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+import pageobjects.RegisterPage;
+
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FirstTest extends BaseTest {
 
@@ -53,4 +60,19 @@ public class FirstTest extends BaseTest {
         openSignInPage ();
         signInPage.checkboxTextOnTheSignInPageIsDisplayed();
     }
-}
+
+    @Test
+    public void validateRolesInDropDown() throws InterruptedException {
+        openWebSite();
+        homePage.clickSubscribeBTN();
+        WebElement searchDropDownElement;
+        searchDropDownElement = driver.findElement(By.xpath(registerPage.dropDown));
+        Select dropDown = new Select(searchDropDownElement);
+        List<WebElement> options = new ArrayList<>();
+        options = dropDown.getOptions();
+        for (int i = 0; i < options.size(); i++) {
+            System.out.println(options.get(i).getText());
+        }
+    }
+   }
+

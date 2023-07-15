@@ -65,4 +65,6 @@ public class SignInPage extends BaseMain {
         System.out.print(driver.findElement(By.id(cheskBox)).isSelected());
     }
 
+
+
 }
