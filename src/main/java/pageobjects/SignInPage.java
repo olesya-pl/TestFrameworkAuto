@@ -2,6 +2,10 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class SignInPage extends BaseMain {
     public String signInForm;
@@ -17,7 +21,7 @@ public class SignInPage extends BaseMain {
     public String textERR ="//div[@class='auth-page-main-block']//div[@class='test-login-errors']//p[text()='Error: email is incorrect']";
     public String rememberMeCheckBox="//div[@class='form-row auth-page-remember-me-row']//div[text()='Remember Me']";
     public String cheskBox = "auth-page-remember-me";
-    String emailValue ="email@ukr.net";
+    public String emailValue ="email@ukr.net";
     String passwordValue ="password";
 
     public String signInForm(String inputEmail, String inputPassword)
@@ -63,6 +67,11 @@ public class SignInPage extends BaseMain {
     }
     public void validateCheckboxOnTheSignInPage(){
         System.out.print(driver.findElement(By.id(cheskBox)).isSelected());
+    }
+
+    public void waitErr(){
+        WebDriverWait waitToERRDisplayed = new WebDriverWait(driver, Duration.ofSeconds(20));
+        waitToERRDisplayed.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(textERR)));
     }
 
 

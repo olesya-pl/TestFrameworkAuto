@@ -1,14 +1,15 @@
 package testcases;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import pageobjects.RegisterPage;
 
 import java.sql.SQLOutput;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class FirstTest extends BaseTest {
     public void fillEmailAndPasswordFiellsAndPressLoginBtn() throws InterruptedException {
         fillEmailAndPasswordFiells();
         signInPage.clickLoginBtn();
-    }
+   }
 
     @Test
     public void fillEmailAndPasswordFiellsAndValidateError() throws InterruptedException {
@@ -74,5 +75,12 @@ public class FirstTest extends BaseTest {
             System.out.println(options.get(i).getText());
         }
     }
+
+        @Test
+        public void ValidateErrorWithWaiting () throws InterruptedException {
+            fillEmailAndPasswordFiellsAndPressLoginBtn();
+            signInPage.waitErr();
+        }
+
    }
 
