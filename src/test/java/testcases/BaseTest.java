@@ -8,11 +8,14 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v85.network.Network;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pageobjects.BaseMain;
 import pageobjects.HomePage;
 import pageobjects.RegisterPage;
 import pageobjects.SignInPage;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class BaseTest {
@@ -21,6 +24,7 @@ public class BaseTest {
     HomePage homePage;
     SignInPage signInPage;
     RegisterPage registerPage;
+    BaseMain baseMain;
 
     @BeforeMethod
     public void setUp (){
@@ -31,8 +35,9 @@ public class BaseTest {
         homePage = new HomePage(driver);
         signInPage = new SignInPage(driver);
         registerPage= new RegisterPage(driver);
+        baseMain = new BaseMain(driver);
         driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 
       // I used this for test "ValidateErrorWithWaiting"
       //  DevTools devTools = ((ChromeDriver)driver).getDevTools();
@@ -43,6 +48,6 @@ public class BaseTest {
 
    @AfterMethod
   public void closeBrowser() {
-        driver.close();
+        driver.quit();
     }
 }
