@@ -10,26 +10,23 @@ import java.util.List;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-public class HardAssert extends BaseTest {
-
-    String actuallySiteTitle;
-    String expectedSiteTitle = "My Fork - your educational solution";
-    String wrongSiteTitle = "My Fork";
-    String actuallyDropDownSize = "//select[@id='job-title']//option[@value]" ;
-
-    int actualDropdownSize;
-    int expectedDropdownSize = 13;
-
-      @Test
-    public void WebSiteTitle() {
-        homePage.openWebSite();
-        actuallySiteTitle = driver.getTitle();
-
-        Assert.assertEquals(actuallySiteTitle, expectedSiteTitle);
-        System.out.println("Title " + actuallySiteTitle + " is correct");
-    }
+public class AssertionsSoft extends BaseTest{
+        String actuallySiteTitle;
+        String expectedSiteTitle = "My Fork - your educational solution";
+        String wrongSiteTitle = "My Fork";
+        String actuallyDropDownSize = "//select[@id='job-title']//option[@value]" ;
+        int actualDropdownSize;
+        int expectedDropdownSize = 14;
+        org.testng.asserts.SoftAssert softAssert = new org.testng.asserts.SoftAssert();
     @Test
-    public void SizeOfRolesInDropDownList() {
+        public void WebSiteTitle() {
+            homePage.openWebSite();
+            actuallySiteTitle = driver.getTitle();
+            softAssert.assertEquals(actuallySiteTitle,expectedSiteTitle, "Title the same");
+            softAssert.assertAll();
+        }
+    @Test
+    public void NotExpectedTheSameSizeOfRolesInDropDownList() {
         homePage.openWebSite();
         homePage.clickSubscribeBTN();
         WebElement searchDropDownElement;
@@ -37,26 +34,26 @@ public class HardAssert extends BaseTest {
         Select dropDown = new Select(searchDropDownElement);
         List<WebElement> elementList = driver.findElements(By.xpath(actuallyDropDownSize));
         actualDropdownSize = elementList.size();
-        Assert.assertEquals(actualDropdownSize, expectedDropdownSize);
-        }
-
+        softAssert.assertNotEquals(actualDropdownSize, expectedDropdownSize, "DropDownSize the same");
+        softAssert.assertAll();
+    }
     @Test
     public void ValidateError () throws InterruptedException {
         homePage.clickSignIn();
         Thread.sleep(1000);
         signInPage.fillTheSignInForm();
         signInPage.clickLoginBtn();
-        Thread.sleep(5000); // by manipulating the number of seconds we can get failed or successful tests. I use numbers 1000 or 5000
+        Thread.sleep(5000); //by manipulating the number of seconds we can get failed or successful tests. I use numbers 1000 or 5000
         Boolean actuallyErr = driver.findElement(By.xpath("//div[@class='auth-page-main-block']//div[@class='test-login-errors']//p[text()='Error: email is incorrect']")).isDisplayed();
-        assertTrue(actuallyErr);
-            }
-
+        softAssert.assertTrue(actuallyErr);
+        softAssert.assertAll();
+    }
     @Test
     public void wrongWebSiteTitle() {
         homePage.openWebSite();
         actuallySiteTitle = driver.getTitle();
-
-        Assert.assertEquals(wrongSiteTitle, expectedSiteTitle);
+        softAssert.assertEquals(wrongSiteTitle, expectedSiteTitle);
         System.out.println("Title " + wrongSiteTitle + " is not correct");
+        softAssert.assertAll();
     }
-    }
+}
