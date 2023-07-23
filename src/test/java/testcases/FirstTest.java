@@ -1,16 +1,12 @@
 package testcases;
 
+import com.sun.source.util.SourcePositions;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageobjects.RegisterPage;
 
 import java.sql.SQLOutput;
-import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FirstTest extends BaseTest {
@@ -18,7 +14,7 @@ public class FirstTest extends BaseTest {
    @Test
     public void openWebSite(){
        homePage.openWebSite();
-   }
+          }
     @Test
       public void openSignInPage() throws InterruptedException {
         homePage.clickSignIn();
@@ -63,16 +59,16 @@ public class FirstTest extends BaseTest {
     }
 
     @Test
-    public void validateRolesInDropDown() throws InterruptedException {
+    public void validateRolesInDropDown() {
         openWebSite();
         homePage.clickSubscribeBTN();
         WebElement searchDropDownElement;
         searchDropDownElement = driver.findElement(By.xpath(registerPage.dropDown));
         Select dropDown = new Select(searchDropDownElement);
-        List<WebElement> options = new ArrayList<>();
+        List<WebElement> options;
         options = dropDown.getOptions();
-        for (int i = 0; i < options.size(); i++) {
-            System.out.println(options.get(i).getText());
+        for (WebElement option : options) {
+            System.out.println(option.getText());
         }
     }
 

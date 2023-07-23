@@ -17,7 +17,7 @@ public class HomePage extends BaseMain {
     public String subscribeButton = "//a[@href='/register']";
 
      public void clickSignIn () throws InterruptedException{
-         openWebSite();;
+         openWebSite();
          driver.findElement(By.xpath(signInButton)).click();
         }
         public void clickSubscribeBTN(){

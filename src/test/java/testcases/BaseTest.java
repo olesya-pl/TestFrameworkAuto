@@ -1,11 +1,7 @@
 package testcases;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v85.network.Network;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pageobjects.BaseMain;
@@ -14,9 +10,6 @@ import pageobjects.RegisterPage;
 import pageobjects.SignInPage;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 public class BaseTest {
 
@@ -48,6 +41,6 @@ public class BaseTest {
 
    @AfterMethod
   public void closeBrowser() {
-        driver.quit();
+       // driver.quit();
     }
 }
