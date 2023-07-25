@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="17" passed="15" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-24T05:08:04 EEST" name="Suite1" finished-at="2023-07-24T05:09:51 EEST" duration-ms="107117">
+    <groups>
+    </groups>
+    <test started-at="2023-07-24T05:08:04 EEST" name="Smoke" finished-at="2023-07-24T05:09:15 EEST" duration-ms="70913">
+      <class name="testcases.FirstTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:04 EEST" name="setUp" finished-at="2023-07-24T05:08:07 EEST" duration-ms="3099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="EmailPasswordAndLogginButtonAreDisplayed()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:07 EEST" name="EmailPasswordAndLogginButtonAreDisplayed" finished-at="2023-07-24T05:08:12 EEST" duration-ms="5149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmailPasswordAndLogginButtonAreDisplayed -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:12 EEST" name="closeBrowser" finished-at="2023-07-24T05:08:12 EEST" duration-ms="283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:12 EEST" name="setUp" finished-at="2023-07-24T05:08:14 EEST" duration-ms="1447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidateErrorWithWaiting()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:14 EEST" name="ValidateErrorWithWaiting" finished-at="2023-07-24T05:08:25 EEST" duration-ms="11454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateErrorWithWaiting -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:25 EEST" name="closeBrowser" finished-at="2023-07-24T05:08:26 EEST" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:26 EEST" name="setUp" finished-at="2023-07-24T05:08:27 EEST" duration-ms="1761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="fillEmailAndPasswordFiells()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:27 EEST" name="fillEmailAndPasswordFiells" finished-at="2023-07-24T05:08:32 EEST" duration-ms="5164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillEmailAndPasswordFiells -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:32 EEST" name="closeBrowser" finished-at="2023-07-24T05:08:33 EEST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:33 EEST" name="setUp" finished-at="2023-07-24T05:08:35 EEST" duration-ms="2183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="fillEmailAndPasswordFiellsAndValidateCheckbox()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:35 EEST" name="fillEmailAndPasswordFiellsAndValidateCheckbox" finished-at="2023-07-24T05:08:39 EEST" duration-ms="4251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillEmailAndPasswordFiellsAndValidateCheckbox -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:39 EEST" name="closeBrowser" finished-at="2023-07-24T05:08:40 EEST" duration-ms="454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:40 EEST" name="setUp" finished-at="2023-07-24T05:08:41 EEST" duration-ms="1600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="fillEmailAndPasswordFiellsAndValidateError()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:41 EEST" name="fillEmailAndPasswordFiellsAndValidateError" finished-at="2023-07-24T05:08:54 EEST" duration-ms="12536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillEmailAndPasswordFiellsAndValidateError -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:54 EEST" name="closeBrowser" finished-at="2023-07-24T05:08:54 EEST" duration-ms="287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:54 EEST" name="setUp" finished-at="2023-07-24T05:08:55 EEST" duration-ms="1014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openSignInPage()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:55 EEST" name="openSignInPage" finished-at="2023-07-24T05:08:59 EEST" duration-ms="4250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openSignInPage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:08:59 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:00 EEST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:00 EEST" name="setUp" finished-at="2023-07-24T05:09:00 EEST" duration-ms="899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openWebSite()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:00 EEST" name="openWebSite" finished-at="2023-07-24T05:09:04 EEST" duration-ms="3441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openWebSite -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:04 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:04 EEST" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:04 EEST" name="setUp" finished-at="2023-07-24T05:09:05 EEST" duration-ms="943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateRolesInDropDown()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:05 EEST" name="validateRolesInDropDown" finished-at="2023-07-24T05:09:09 EEST" duration-ms="4303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRolesInDropDown -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:09 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:09 EEST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:09 EEST" name="setUp" finished-at="2023-07-24T05:09:11 EEST" duration-ms="1055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCheckboxText()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:11 EEST" name="verifyCheckboxText" finished-at="2023-07-24T05:09:15 EEST" duration-ms="3984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCheckboxText -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-24T05:09:15 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:15 EEST" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testcases.FirstTest -->
+    </test> <!-- Smoke -->
+    <test started-at="2023-07-24T05:09:15 EEST" name="Regression" finished-at="2023-07-24T05:09:51 EEST" duration-ms="36152">
+      <class name="testcases.AssertionsSoft">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:15 EEST" name="setUp" finished-at="2023-07-24T05:09:16 EEST" duration-ms="1383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="NotExpectedTheSameSizeOfRolesInDropDownList()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:16 EEST" name="NotExpectedTheSameSizeOfRolesInDropDownList" finished-at="2023-07-24T05:09:20 EEST" duration-ms="4003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotExpectedTheSameSizeOfRolesInDropDownList -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:20 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:20 EEST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:20 EEST" name="setUp" finished-at="2023-07-24T05:09:22 EEST" duration-ms="1905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidateError()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:22 EEST" name="ValidateError" finished-at="2023-07-24T05:09:33 EEST" duration-ms="10429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateError -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:33 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:33 EEST" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:33 EEST" name="setUp" finished-at="2023-07-24T05:09:35 EEST" duration-ms="1980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="WebSiteTitle()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:35 EEST" name="WebSiteTitle" finished-at="2023-07-24T05:09:38 EEST" duration-ms="3225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebSiteTitle -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:38 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:38 EEST" duration-ms="371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:38 EEST" name="setUp" finished-at="2023-07-24T05:09:40 EEST" duration-ms="1052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="wrongWebSiteTitle()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:40 EEST" name="wrongWebSiteTitle" finished-at="2023-07-24T05:09:51 EEST" duration-ms="11201" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [My Fork - your educational solution] but found [My Fork]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [My Fork - your educational solution] but found [My Fork]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at testcases.AssertionsSoft.wrongWebSiteTitle(AssertionsSoft.java:57)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1623)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongWebSiteTitle -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-24T05:09:51 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:51 EEST" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testcases.AssertionsSoft -->
+      <class name="testcases.HardAssert">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:15 EEST" name="setUp" finished-at="2023-07-24T05:09:16 EEST" duration-ms="1245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SizeOfRolesInDropDownList()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:16 EEST" name="SizeOfRolesInDropDownList" finished-at="2023-07-24T05:09:20 EEST" duration-ms="3870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SizeOfRolesInDropDownList -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:20 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:20 EEST" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:20 EEST" name="setUp" finished-at="2023-07-24T05:09:22 EEST" duration-ms="1605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidateError()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:22 EEST" name="ValidateError" finished-at="2023-07-24T05:09:32 EEST" duration-ms="10414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateError -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:32 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:32 EEST" duration-ms="329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:32 EEST" name="setUp" finished-at="2023-07-24T05:09:34 EEST" duration-ms="1155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="WebSiteTitle()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:34 EEST" name="WebSiteTitle" finished-at="2023-07-24T05:09:37 EEST" duration-ms="3076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebSiteTitle -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:37 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:37 EEST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:37 EEST" name="setUp" finished-at="2023-07-24T05:09:38 EEST" duration-ms="1524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="wrongWebSiteTitle()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:38 EEST" name="wrongWebSiteTitle" finished-at="2023-07-24T05:09:41 EEST" duration-ms="2912" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [My Fork - your educational solution] but found [My Fork]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [My Fork - your educational solution] but found [My Fork]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testcases.HardAssert.wrongWebSiteTitle(HardAssert.java:59)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1623)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongWebSiteTitle -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-24T05:09:41 EEST" name="closeBrowser" finished-at="2023-07-24T05:09:42 EEST" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testcases.HardAssert -->
+    </test> <!-- Regression -->
+  </suite> <!-- Suite1 -->
+</testng-results>
