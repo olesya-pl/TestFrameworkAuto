@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="classes" name="Failed suite [Suite1]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="2" parallel="classes" name="Smoke(failed)" verbose="0">
+    <classes>
+      <class name="testcases.FirstTest">
+        <methods>
+          <include name="validateRolesInDropDown"/>
+          <include name="verifyCheckboxText"/>
+          <include name="closeBrowser"/>
+          <include name="setUp"/>
+          <include name="openSignInPage"/>
+          <include name="ValidateErrorWithWaiting"/>
+          <include name="fillEmailAndPasswordFiells"/>
+          <include name="fillEmailAndPasswordFiellsAndValidateCheckbox"/>
+          <include name="fillEmailAndPasswordFiellsAndValidateError"/>
+        </methods>
+      </class> <!-- testcases.FirstTest -->
+    </classes>
+  </test> <!-- Smoke(failed) -->
   <test thread-count="2" parallel="classes" name="Regression(failed)" verbose="0">
     <classes>
       <class name="testcases.AssertionsSoft">
         <methods>
           <include name="closeBrowser"/>
+          <include name="WebSiteTitle"/>
+          <include name="NotExpectedTheSameSizeOfRolesInDropDownList"/>
           <include name="setUp"/>
+          <include name="ValidateError"/>
           <include name="wrongWebSiteTitle"/>
         </methods>
       </class> <!-- testcases.AssertionsSoft -->
@@ -14,7 +34,9 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="wrongWebSiteTitle"/>
+          <include name="ValidateError"/>
           <include name="setUp"/>
+          <include name="WebSiteTitle"/>
         </methods>
       </class> <!-- testcases.HardAssert -->
     </classes>
