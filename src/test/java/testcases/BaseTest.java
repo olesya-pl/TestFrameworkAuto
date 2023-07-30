@@ -19,7 +19,7 @@ public class BaseTest {
     RegisterPage registerPage;
     BaseMain baseMain;
 
-    @BeforeMethod
+    @BeforeMethod (groups = {"some", "menu", "next"}, alwaysRun = true)
     public void setUp (){
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\opylypiv\\Desktop\\TestFrameworkAuto\\src\\test\\resources\\executables\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
@@ -39,7 +39,7 @@ public class BaseTest {
       //  devTools.send(Network.emulateNetworkConditions(false,1000, 100000, 100000, Optional.empty()));
     }
 
-   @AfterMethod
+   @AfterMethod (groups = {"some", "menu", "next"}, alwaysRun = true)
   public void closeBrowser() {
         driver.quit();
     }

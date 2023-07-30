@@ -1,16 +1,36 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" parallel="classes" thread-count="2" verbose="1" >
+<suite name="Suite1" parallel="classes" thread-count="1" verbose="1" >
     <test name="Smoke" >
+        <groups>
+            <run>
+                <exclude name="menu"></exclude>
+                <include name="next"></include>
+                <exclude name="some"></exclude>
+            </run>
+        </groups>
         <classes>
             <class name="testcases.FirstTest" />
         </classes>
     </test>
 
     <test name="Regression">
+        <groups>
+            <run>
+                <exclude name="menu"></exclude>
+                <exclude name="next"></exclude>
+                <include name="some"></include>
+            </run>
+        </groups>
         <classes>
-            <class name="testcases.HardAssert"/>
+            <class name="testcases.HardAssert">
+                <methods>
+                    <exclude name="wrongWebSiteTitle"></exclude>
+                    <exclude name="SizeOfRolesInDropDownList"></exclude>
+                </methods>
+            </class>
             <class name="testcases.AssertionsSoft"/>
+            <class name="testcases.DriverInteractions"/>
         </classes>
     </test>
 </suite>

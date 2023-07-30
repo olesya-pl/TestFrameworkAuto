@@ -18,14 +18,14 @@ public class AssertionsSoft extends BaseTest{
         int actualDropdownSize;
         int expectedDropdownSize = 14;
         org.testng.asserts.SoftAssert softAssert = new org.testng.asserts.SoftAssert();
-    @Test
+    @Test (priority = 2, groups = {"next"})
         public void WebSiteTitle() {
             homePage.openWebSite();
             actuallySiteTitle = driver.getTitle();
             softAssert.assertEquals(actuallySiteTitle,expectedSiteTitle, "Title the same");
             softAssert.assertAll();
         }
-    @Test
+    @Test (priority = 1, groups = {"menu"})
     public void NotExpectedTheSameSizeOfRolesInDropDownList() {
         homePage.openWebSite();
         homePage.clickSubscribeBTN();
@@ -37,7 +37,7 @@ public class AssertionsSoft extends BaseTest{
         softAssert.assertNotEquals(actualDropdownSize, expectedDropdownSize, "DropDownSize the same");
         softAssert.assertAll();
     }
-    @Test
+    @Test (priority = 1,groups = {"some"})
     public void ValidateError () throws InterruptedException {
         homePage.clickSignIn();
         Thread.sleep(1000);
@@ -48,7 +48,7 @@ public class AssertionsSoft extends BaseTest{
         softAssert.assertTrue(actuallyErr);
         softAssert.assertAll();
     }
-    @Test
+    @Test (priority = 6)
     public void wrongWebSiteTitle() {
         homePage.openWebSite();
         actuallySiteTitle = driver.getTitle();

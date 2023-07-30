@@ -39,7 +39,7 @@ public class FirstTest extends BaseTest {
         signInPage.clickLoginBtn();
    }
 
-    @Test
+    @Test (priority = 1, groups = {"some"})
     public void fillEmailAndPasswordFiellsAndValidateError() throws InterruptedException {
         openSignInPage ();
         Thread.sleep(1000);
@@ -47,18 +47,18 @@ public class FirstTest extends BaseTest {
         Thread.sleep(5000);
         signInPage.loginERRIsDisplyed();
     }
-    @Test
+    @Test (priority = 2, groups = {"next"})
     public void fillEmailAndPasswordFiellsAndValidateCheckbox() throws InterruptedException {
         openSignInPage ();
         signInPage.validateCheckboxOnTheSignInPage();
     }
-    @Test
+    @Test (priority = 4, groups = {"menu"})
     public void verifyCheckboxText() throws InterruptedException {
         openSignInPage ();
         signInPage.checkboxTextOnTheSignInPageIsDisplayed();
     }
 
-    @Test
+    @Test (priority = 3, groups = {"next"})
     public void validateRolesInDropDown() {
         openWebSite();
         homePage.clickSubscribeBTN();
@@ -72,7 +72,7 @@ public class FirstTest extends BaseTest {
         }
     }
 
-        @Test
+        @Test (priority = 5, groups = {"next"})
         public void ValidateErrorWithWaiting () throws InterruptedException {
             fillEmailAndPasswordFiellsAndPressLoginBtn();
             signInPage.waitErr();

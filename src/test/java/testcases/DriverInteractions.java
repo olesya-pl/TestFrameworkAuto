@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DriverInteractions extends BaseTest{
-    @Test
+    @Test (priority = 1, groups = {"menu"})
     public void switchToTabTest (){
         driver.get(homePage.webSiteURL);
         baseMain.openNewTab();
@@ -25,7 +25,7 @@ public class DriverInteractions extends BaseTest{
     }
 
 
-       @Test
+       @Test (priority = 4, groups = {"some"})
   public void scrollTest() throws InterruptedException{
            driver.get(homePage.webSiteURL);
            baseMain.scroll(3000);

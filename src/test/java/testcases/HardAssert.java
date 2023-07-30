@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.sql.SQLOutput;
 import java.util.List;
 
 import static org.testng.AssertJUnit.assertTrue;
@@ -20,15 +21,14 @@ public class HardAssert extends BaseTest {
     int actualDropdownSize;
     int expectedDropdownSize = 13;
 
-      @Test
+      @Test(priority = 2)
     public void WebSiteTitle() {
         homePage.openWebSite();
         actuallySiteTitle = driver.getTitle();
-
         Assert.assertEquals(actuallySiteTitle, expectedSiteTitle);
         System.out.println("Title " + actuallySiteTitle + " is correct");
     }
-    @Test
+    @Test (priority = 2, groups = {"next"})
     public void SizeOfRolesInDropDownList() {
         homePage.openWebSite();
         homePage.clickSubscribeBTN();
@@ -40,7 +40,7 @@ public class HardAssert extends BaseTest {
         Assert.assertEquals(actualDropdownSize, expectedDropdownSize);
         }
 
-    @Test
+    @Test(priority = 1, groups = {"menu"})
     public void ValidateError () throws InterruptedException {
         homePage.clickSignIn();
         Thread.sleep(1000);
@@ -51,11 +51,10 @@ public class HardAssert extends BaseTest {
         assertTrue(actuallyErr);
             }
 
-    @Test
+    @Test (groups = {"some"})
     public void wrongWebSiteTitle() {
         homePage.openWebSite();
         actuallySiteTitle = driver.getTitle();
-
         Assert.assertEquals(wrongSiteTitle, expectedSiteTitle);
         System.out.println("Title " + wrongSiteTitle + " is not correct");
     }
