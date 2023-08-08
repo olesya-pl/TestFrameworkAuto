@@ -41,6 +41,6 @@ public class BaseTest {
 
    @AfterMethod (groups = {"some", "menu", "next"}, alwaysRun = true)
   public void closeBrowser() {
-        driver.quit();
+       // driver.quit();
     }
 }

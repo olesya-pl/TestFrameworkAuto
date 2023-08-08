@@ -50,6 +50,10 @@ public class SignInPage extends BaseMain {
         driver.findElement(By.xpath(inputEmail)).sendKeys(emailValue);
         driver.findElement(By.xpath(inputPassword)).sendKeys(passwordValue);
     }
+    public void fillUnickEmailAndassword(String emailValue,String passwordValue){
+        driver.findElement(By.xpath(inputEmail)).sendKeys(emailValue);
+        driver.findElement(By.xpath(inputPassword)).sendKeys(passwordValue);
+    }
 
     public void clickLoginBtn(){
         driver.findElement(By.xpath(loginButton)).click();

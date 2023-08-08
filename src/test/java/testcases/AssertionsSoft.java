@@ -29,8 +29,7 @@ public class AssertionsSoft extends BaseTest{
     public void NotExpectedTheSameSizeOfRolesInDropDownList() {
         homePage.openWebSite();
         homePage.clickSubscribeBTN();
-        WebElement searchDropDownElement;
-        searchDropDownElement = driver.findElement(By.xpath(registerPage.dropDown));
+        WebElement searchDropDownElement = driver.findElement(By.xpath(registerPage.dropDown));
         Select dropDown = new Select(searchDropDownElement);
         List<WebElement> elementList = driver.findElements(By.xpath(actuallyDropDownSize));
         actualDropdownSize = elementList.size();
