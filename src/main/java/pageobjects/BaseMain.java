@@ -1,9 +1,6 @@
 package pageobjects;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WindowType;
+import org.openqa.selenium.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,4 +27,5 @@ public class BaseMain {
         JavascriptExecutor Js = (JavascriptExecutor) driver;
         Js.executeScript("window.scrollBy(0,"+pixels+")", "");
     }
+
 }
