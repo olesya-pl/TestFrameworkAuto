@@ -9,46 +9,38 @@ public class HistoryTest extends BaseTest {
     @Test
     public void validateHistory () throws InterruptedException {
         homePage.openWebSite();
-        homePage.clickOnCourseGalleryButton();
-        historyPage.historyButton();
+        homePage.siteName();
+        baseMain.clickUsingXpath(homePage.GalleryButton, "Gallery Button");
+        historyPage.historyButtonAValidation();
         driver.navigate().back();
-        homePage.clickSignIn();
-        signInPage.fillUnickEmailAndassword("testing@my-fork.com", "Password");
-        signInPage.clickLoginBtn();
-        homePage.clickOnCourseGalleryButton();
-        Boolean actuallyResult = driver.findElement(By.xpath("//a[@class = 'quiz-section-history-button']")).isDisplayed();
-        Boolean expectedResalt = driver.findElement(By.xpath("//a[@class = 'quiz-section-history-button']")).isDisplayed();
-        Assert.assertEquals(actuallyResult, expectedResalt);
+        baseMain.clickUsingXpath(homePage.signInButton,"Sign In button");
+        signInPage.logInfoInsignInFormUsingXpath();
+        baseMain.clickUsingXpath(homePage.GalleryButton, "Gallery Button");
+        historyPage.historyButtonAValidation();
     }
 
     @Test
-    public void courseGalleryOptionsValidation () {
+    public void courseGalleryOptionsVerification() {
         homePage.openWebSite();
-        homePage.clickOnCourseGalleryButton();
+        homePage.siteName();
+        baseMain.clickUsingXpath(homePage.GalleryButton, "Gallery Button");
         historyPage.menuOptionsVerification();
     }
-        @Test
-        public void progressBar () {
-            homePage.openWebSite();
-            homePage.clickOnCourseGalleryButton();
-            historyPage.clickOnTheStartButton();
-            baseMain.switchToNewTab(1);
-            System.out.println(" Quantity of Total Questions = "  + historyPage.getTotalNumberOfQuestions());
-            historyPage.clickOnTheFirstAnswer();
-            System.out.println(" Quantity of Answered Questions = " + historyPage.getAnsweredQuestions() );
-            historyPage.getProgressBarAfterAnswer();
-            historyPage.getProgressBarValue();
-            Assert.assertEquals(historyPage.getProgressBarValue(), historyPage.getProgressBarAfterAnswer());
-            System.out.println("Actually progress bar after answer № " + historyPage.getAnsweredQuestions() + " = " + historyPage.getProgressBarValue());
-            System.out.println("Estimated progress bar = " + historyPage.getProgressBarAfterAnswer());
-            historyPage.clickOnTheNextButton();
-            Assert.assertEquals(historyPage.getProgressBarValue(), historyPage.getProgressBarAfterAnswer());
-            System.out.println("Progress bar after answer № " + historyPage.getAnsweredQuestions() + " = " + historyPage.getProgressBarValue());
-            System.out.println("Estimated progress bar = " + historyPage.getProgressBarAfterAnswer());
-            historyPage.clickOnTheFirstAnswer();
-            Assert.assertEquals(historyPage.getProgressBarValue(), historyPage.getProgressBarAfterAnswer());
-            System.out.println("Actually progress bar after answer № " + historyPage.getAnsweredQuestions() + " = " + historyPage.getProgressBarValue());
-            System.out.println("Estimated progress bar = " + historyPage.getProgressBarAfterAnswer());
+    @Test
+    public void progressBar () {
+         homePage.openWebSite();
+         homePage.siteName();
+         baseMain.clickUsingXpath(homePage.GalleryButton, "Gallery Button");
+         historyPage.clickOnTheStartButton();
+         baseMain.switchToNewTab(1);
+         System.out.println(" Quantity of Total Questions = "  + historyPage.getTotalNumberOfQuestions());
+         historyPage.clickOnTheFirstAnswer();
+         System.out.println(" Quantity of Answered Questions = " + historyPage.getAnsweredQuestions() );
+         historyPage.verifycationActuallyAndExpectedProgressBar();
+         historyPage.clickOnTheNextButton();
+         historyPage.verifycationActuallyAndExpectedProgressBar();
+         historyPage.clickOnTheFirstAnswer();
+         historyPage.verifycationActuallyAndExpectedProgressBar();
         }
     }
 

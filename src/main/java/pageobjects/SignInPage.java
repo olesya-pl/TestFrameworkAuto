@@ -2,17 +2,18 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.logging.Logger;
 
 public class SignInPage extends BaseMain {
     public String signInForm;
 
-    public SignInPage(WebDriver driver){
-
-        super(driver);
+    public SignInPage(WebDriver driver, Logger log) {
+        super(driver, log);
     }
 
     public String loginButton = "//div[@class='auth-page-main-block']//form//div[@id='loginButton']//button";
@@ -21,8 +22,9 @@ public class SignInPage extends BaseMain {
     public String textERR ="//div[@class='auth-page-main-block']//div[@class='test-login-errors']//p[text()='Error: email is incorrect']";
     public String rememberMeCheckBox="//div[@class='form-row auth-page-remember-me-row']//div[text()='Remember Me']";
     public String cheskBox = "auth-page-remember-me";
-    public String emailValue ="email@ukr.net";
-    String passwordValue ="password";
+    public String emailValue ="testing@my-fork.com";
+    String passwordValue ="Password";
+    public  String url = "http://test.my-fork.com/login";
 
     public String signInForm(String inputEmail, String inputPassword)
     {
@@ -78,6 +80,25 @@ public class SignInPage extends BaseMain {
         waitToERRDisplayed.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(textERR)));
     }
 
+    public void logInfoInsignInFormUsingXpath() {
+      //  driver.get(url);
+        typeUsingXpath(inputEmail, "email text field", emailValue);
+        typeUsingXpath(inputPassword, "password text field", passwordValue);
+        clickUsingXpath(loginButton, "Login button");
+    }
+    public void logInfoUsingLoginBtnAsWebElement() {
+        //driver.get(url);
+        typeUsingXpath(inputEmail, "email text field", emailValue);
+        typeUsingXpath(inputPassword, "password text field", passwordValue);
+        WebElement login_btn = driver.findElement(By.xpath(loginButton));
+        clickUsingWebElement(login_btn, "Login button");
+    }
+    public void logInfoInsignInFormUsingXpathAfterWait() throws InterruptedException {
+       // driver.get(url);
+        typeUsingXpath(inputEmail, "email text field", emailValue);
+        typeUsingXpath(inputPassword, "password text field", passwordValue);
+        clickUsingXpathAfterWait(loginButton, "Login button");
+    }
 
 
 }

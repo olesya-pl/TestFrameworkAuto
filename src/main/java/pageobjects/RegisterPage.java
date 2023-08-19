@@ -7,10 +7,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class RegisterPage extends BaseMain {
-    public RegisterPage(WebDriver driver) {
-        super(driver);
+    public RegisterPage(WebDriver driver, Logger log) {
+        super(driver, log);
     }
 
     public String dropDown = "//select[@id='job-title']";

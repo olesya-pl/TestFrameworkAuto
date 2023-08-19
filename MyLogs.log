@@ -1,0 +1,60 @@
+Aug 19, 2023 4:31:39 AM testcases.BaseTest savelogs
+INFO: This is the beginning of the test suit
+Aug 19, 2023 4:31:42 AM pageobjects.HomePage siteName
+INFO: WebSite http://test.my-fork.com is opened successfully
+Aug 19, 2023 4:31:43 AM pageobjects.BaseMain clickUsingXpath
+INFO: Element Gallery Button was successfully clicked
+Aug 19, 2023 4:31:43 AM pageobjects.HistoryPage menuOptionsVerification
+INFO: actually list of menu options is:[Development, Testing, Business Analyst, Agile, Project Management]
+Aug 19, 2023 4:31:43 AM pageobjects.HistoryPage menuOptionsVerification
+INFO: expected list of menu options is:[Development, Testing, Business Analyst, Agile, Project Management]
+Aug 19, 2023 4:31:43 AM pageobjects.HistoryPage menuOptionsVerification
+INFO: The lists [Development, Testing, Business Analyst, Agile, Project Management] and [Development, Testing, Business Analyst, Agile, Project Management] are equal
+Aug 19, 2023 4:31:44 AM testcases.BaseTest savelogs
+INFO: This is the beginning of the test suit
+Aug 19, 2023 4:31:50 AM pageobjects.HomePage siteName
+INFO: WebSite http://test.my-fork.com is opened successfully
+Aug 19, 2023 4:31:51 AM pageobjects.BaseMain clickUsingXpath
+INFO: Element Gallery Button was successfully clicked
+Aug 19, 2023 4:31:51 AM pageobjects.HistoryPage clickOnTheStartButton
+INFO:  Start button was successfully clicked 
+Aug 19, 2023 4:31:51 AM pageobjects.BaseMain switchToNewTab
+INFO:  switched to tab #1 was successfully
+Aug 19, 2023 4:31:52 AM pageobjects.HistoryPage clickOnTheFirstAnswer
+INFO:  the first answer was successfully clicked 
+Aug 19, 2023 4:31:52 AM pageobjects.HistoryPage verifycationActuallyAndExpectedProgressBar
+INFO: Actually progress bar after answer № 1.0 = 11 %
+Aug 19, 2023 4:31:52 AM pageobjects.HistoryPage verifycationActuallyAndExpectedProgressBar
+INFO: Estimated progress bar = 11 %
+Aug 19, 2023 4:31:52 AM pageobjects.HistoryPage clickOnTheNextButton
+INFO: Next Button was clicked successfully 
+Aug 19, 2023 4:31:53 AM pageobjects.HistoryPage verifycationActuallyAndExpectedProgressBar
+INFO: Actually progress bar after answer № 1.0 = 11 %
+Aug 19, 2023 4:31:53 AM pageobjects.HistoryPage verifycationActuallyAndExpectedProgressBar
+INFO: Estimated progress bar = 11 %
+Aug 19, 2023 4:31:53 AM pageobjects.HistoryPage clickOnTheFirstAnswer
+INFO:  the first answer was successfully clicked 
+Aug 19, 2023 4:31:53 AM pageobjects.HistoryPage verifycationActuallyAndExpectedProgressBar
+INFO: Actually progress bar after answer № 2.0 = 22 %
+Aug 19, 2023 4:31:53 AM pageobjects.HistoryPage verifycationActuallyAndExpectedProgressBar
+INFO: Estimated progress bar = 22 %
+Aug 19, 2023 4:31:54 AM testcases.BaseTest savelogs
+INFO: This is the beginning of the test suit
+Aug 19, 2023 4:31:57 AM pageobjects.HomePage siteName
+INFO: WebSite http://test.my-fork.com is opened successfully
+Aug 19, 2023 4:31:58 AM pageobjects.BaseMain clickUsingXpath
+INFO: Element Gallery Button was successfully clicked
+Aug 19, 2023 4:32:08 AM pageobjects.HistoryPage historyButtonAValidation
+INFO: History button is absent on the page
+Aug 19, 2023 4:32:19 AM pageobjects.BaseMain clickUsingXpath
+INFO: Element Sign In button was successfully clicked
+Aug 19, 2023 4:32:19 AM pageobjects.BaseMain typeUsingXpath
+INFO: Value testing@my-fork.com was successfully entered into email text field element
+Aug 19, 2023 4:32:19 AM pageobjects.BaseMain typeUsingXpath
+INFO: Value Password was successfully entered into password text field element
+Aug 19, 2023 4:32:20 AM pageobjects.BaseMain clickUsingXpath
+INFO: Element Login button was successfully clicked
+Aug 19, 2023 4:32:21 AM pageobjects.BaseMain clickUsingXpath
+INFO: Element Gallery Button was successfully clicked
+Aug 19, 2023 4:32:21 AM pageobjects.HistoryPage historyButtonAValidation
+INFO: History button is present on the page
