@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 86.068 s <<< FAILURE! - in TestSuite
+wrongWebSiteTitle(testcases.HardAssert)  Time elapsed: 3.079 s  <<< FAILURE!
+java.lang.AssertionError: expected [My Fork - your educational solution] but found [My Fork]
+	at testcases.HardAssert.wrongWebSiteTitle(HardAssert.java:59)
+
