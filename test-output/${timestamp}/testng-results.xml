@@ -1,66 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="17" passed="3" failed="11" skipped="3">
+<testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-28T20:53:15 EEST" name="Suite1" finished-at="2023-07-28T20:53:58 EEST" duration-ms="42395">
+  <suite started-at="2023-08-26T19:27:58 EEST" name="Suite1" finished-at="2023-08-26T19:27:58 EEST" duration-ms="174">
     <groups>
+      <group name="next">
+        <method signature="FirstTest.fillEmailAndPasswordFiellsAndValidateCheckbox()[pri:2, instance:testcases.FirstTest@e056f20]" name="fillEmailAndPasswordFiellsAndValidateCheckbox" class="testcases.FirstTest"/>
+        <method signature="FirstTest.validateRolesInDropDown()[pri:3, instance:testcases.FirstTest@e056f20]" name="validateRolesInDropDown" class="testcases.FirstTest"/>
+        <method signature="FirstTest.ValidateErrorWithWaiting()[pri:5, instance:testcases.FirstTest@e056f20]" name="ValidateErrorWithWaiting" class="testcases.FirstTest"/>
+      </group> <!-- next -->
+      <group name="some">
+        <method signature="AssertionsSoft.ValidateError()[pri:1, instance:testcases.AssertionsSoft@1a451d4d]" name="ValidateError" class="testcases.AssertionsSoft"/>
+        <method signature="DriverInteractions.scrollTest()[pri:4, instance:testcases.DriverInteractions@7fa98a66]" name="scrollTest" class="testcases.DriverInteractions"/>
+      </group> <!-- some -->
     </groups>
-    <test started-at="2023-07-28T20:53:15 EEST" name="Smoke" finished-at="2023-07-28T20:53:48 EEST" duration-ms="32602">
+    <test started-at="2023-08-26T19:27:58 EEST" name="Smoke" finished-at="2023-08-26T19:27:58 EEST" duration-ms="61">
       <class name="testcases.FirstTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:15 EEST" name="setUp" finished-at="2023-07-28T20:53:17 EEST" duration-ms="1768" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="EmailPasswordAndLogginButtonAreDisplayed()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:17 EEST" name="EmailPasswordAndLogginButtonAreDisplayed" finished-at="2023-07-28T20:53:31 EEST" duration-ms="13980" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EmailPasswordAndLogginButtonAreDisplayed -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:31 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:31 EEST" duration-ms="143" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:31 EEST" name="setUp" finished-at="2023-07-28T20:53:32 EEST" duration-ms="781" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="ValidateErrorWithWaiting()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:32 EEST" name="ValidateErrorWithWaiting" finished-at="2023-07-28T20:53:33 EEST" duration-ms="1174" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method signature="fillEmailAndPasswordFiellsAndValidateCheckbox()[pri:2, instance:testcases.FirstTest@e056f20]" started-at="2023-08-26T19:27:58 EEST" name="fillEmailAndPasswordFiellsAndValidateCheckbox" finished-at="2023-08-26T19:27:58 EEST" duration-ms="8" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d4026cb44e927fddbe5e673643951b7, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53111/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d4026cb44e927fddbe5e673643951b7]]>
+              <![CDATA[Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d4026cb44e927fddbe5e673643951b7, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53111/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d4026cb44e927fddbe5e673643951b7
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pageobjects.HomePage.clickSignIn(HomePage.java:21)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null
+at testcases.FirstTest.openSignInPage(FirstTest.java:20)
+at testcases.FirstTest.fillEmailAndPasswordFiellsAndValidateCheckbox(FirstTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1623)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillEmailAndPasswordFiellsAndValidateCheckbox -->
+        <test-method signature="validateRolesInDropDown()[pri:3, instance:testcases.FirstTest@e056f20]" started-at="2023-08-26T19:27:58 EEST" name="validateRolesInDropDown" finished-at="2023-08-26T19:27:58 EEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "pageobjects.HomePage.openWebSite()" because "this.homePage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "pageobjects.HomePage.openWebSite()" because "this.homePage" is null
+at testcases.FirstTest.openWebSite(FirstTest.java:16)
+at testcases.FirstTest.validateRolesInDropDown(FirstTest.java:63)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1623)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRolesInDropDown -->
+        <test-method signature="ValidateErrorWithWaiting()[pri:5, instance:testcases.FirstTest@e056f20]" started-at="2023-08-26T19:27:58 EEST" name="ValidateErrorWithWaiting" finished-at="2023-08-26T19:27:58 EEST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null
 at testcases.FirstTest.fillEmailAndPasswordFiells(FirstTest.java:31)
 at testcases.FirstTest.fillEmailAndPasswordFiellsAndPressLoginBtn(FirstTest.java:38)
 at testcases.FirstTest.ValidateErrorWithWaiting(FirstTest.java:77)
@@ -79,469 +97,22 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:1623)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateErrorWithWaiting -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:33 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:33 EEST" duration-ms="121" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:33 EEST" name="setUp" finished-at="2023-07-28T20:53:34 EEST" duration-ms="810" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="fillEmailAndPasswordFiells()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:34 EEST" name="fillEmailAndPasswordFiells" finished-at="2023-07-28T20:53:37 EEST" duration-ms="2805" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [18b1ae6b7092147fdccbee63e0e43e75, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53155}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53155/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 18b1ae6b7092147fdccbee63e0e43e75]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [18b1ae6b7092147fdccbee63e0e43e75, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53155}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53155/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 18b1ae6b7092147fdccbee63e0e43e75
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pageobjects.HomePage.clickSignIn(HomePage.java:21)
-at testcases.FirstTest.fillEmailAndPasswordFiells(FirstTest.java:31)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fillEmailAndPasswordFiells -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:37 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:37 EEST" duration-ms="123" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:37 EEST" name="setUp" finished-at="2023-07-28T20:53:38 EEST" duration-ms="800" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="fillEmailAndPasswordFiellsAndValidateCheckbox()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:38 EEST" name="fillEmailAndPasswordFiellsAndValidateCheckbox" finished-at="2023-07-28T20:53:39 EEST" duration-ms="991" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [539c7320ce7f32022b334900a178a3ad, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53211}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53211/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 539c7320ce7f32022b334900a178a3ad]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [539c7320ce7f32022b334900a178a3ad, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53211}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53211/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 539c7320ce7f32022b334900a178a3ad
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pageobjects.HomePage.clickSignIn(HomePage.java:21)
-at testcases.FirstTest.openSignInPage(FirstTest.java:20)
-at testcases.FirstTest.fillEmailAndPasswordFiellsAndValidateCheckbox(FirstTest.java:52)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fillEmailAndPasswordFiellsAndValidateCheckbox -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:39 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:39 EEST" duration-ms="136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:39 EEST" name="setUp" finished-at="2023-07-28T20:53:40 EEST" duration-ms="759" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="fillEmailAndPasswordFiellsAndValidateError()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:40 EEST" name="fillEmailAndPasswordFiellsAndValidateError" finished-at="2023-07-28T20:53:41 EEST" duration-ms="923" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [07108c2eab2db9a10a95d3c66212d4df, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53256}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53256/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 07108c2eab2db9a10a95d3c66212d4df]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [07108c2eab2db9a10a95d3c66212d4df, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53256}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53256/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 07108c2eab2db9a10a95d3c66212d4df
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pageobjects.HomePage.clickSignIn(HomePage.java:21)
-at testcases.FirstTest.openSignInPage(FirstTest.java:20)
-at testcases.FirstTest.fillEmailAndPasswordFiellsAndValidateError(FirstTest.java:44)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fillEmailAndPasswordFiellsAndValidateError -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:41 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:41 EEST" duration-ms="131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:41 EEST" name="setUp" finished-at="2023-07-28T20:53:42 EEST" duration-ms="803" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="openSignInPage()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:42 EEST" name="openSignInPage" finished-at="2023-07-28T20:53:42 EEST" duration-ms="949" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [19a755e251396510481f1a829c37845b, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53312}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53312/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 19a755e251396510481f1a829c37845b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [19a755e251396510481f1a829c37845b, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53312}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53312/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 19a755e251396510481f1a829c37845b
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pageobjects.HomePage.clickSignIn(HomePage.java:21)
-at testcases.FirstTest.openSignInPage(FirstTest.java:20)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openSignInPage -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:43 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:43 EEST" duration-ms="122" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:43 EEST" name="setUp" finished-at="2023-07-28T20:53:43 EEST" duration-ms="866" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="openWebSite()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:43 EEST" name="openWebSite" finished-at="2023-07-28T20:53:44 EEST" duration-ms="463" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openWebSite -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:44 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:44 EEST" duration-ms="130" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:44 EEST" name="setUp" finished-at="2023-07-28T20:53:45 EEST" duration-ms="775" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validateRolesInDropDown()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:45 EEST" name="validateRolesInDropDown" finished-at="2023-07-28T20:53:45 EEST" duration-ms="483" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b953cdbc5d5a9add6d6c56d7cea2bc5e, findElement {using=xpath, value=//a[@href='/register']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53428}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53428/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b953cdbc5d5a9add6d6c56d7cea2bc5e]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b953cdbc5d5a9add6d6c56d7cea2bc5e, findElement {using=xpath, value=//a[@href='/register']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53428}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53428/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b953cdbc5d5a9add6d6c56d7cea2bc5e
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pageobjects.HomePage.clickSubscribeBTN(HomePage.java:24)
-at testcases.FirstTest.validateRolesInDropDown(FirstTest.java:64)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateRolesInDropDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:45 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:45 EEST" duration-ms="126" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:45 EEST" name="setUp" finished-at="2023-07-28T20:53:46 EEST" duration-ms="853" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyCheckboxText()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:46 EEST" name="verifyCheckboxText" finished-at="2023-07-28T20:53:48 EEST" duration-ms="1464" status="FAIL">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
-            <message>
-              <![CDATA[Error communicating with the remote browser. It may have died.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b9093c2649101eaf982fb3582670debf, get {url=http://test.my-fork.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53470}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53470/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b9093c2649101eaf982fb3582670debf]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b9093c2649101eaf982fb3582670debf, get {url=http://test.my-fork.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53470}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53470/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b9093c2649101eaf982fb3582670debf
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-at pageobjects.HomePage.openWebSite(HomePage.java:27)
-at pageobjects.HomePage.clickSignIn(HomePage.java:20)
-at testcases.FirstTest.openSignInPage(FirstTest.java:20)
-at testcases.FirstTest.verifyCheckboxText(FirstTest.java:57)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 18 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-... 1 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCheckboxText -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.FirstTest@3e92efc3]" started-at="2023-07-28T20:53:48 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:48 EEST" duration-ms="21" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- testcases.FirstTest -->
     </test> <!-- Smoke -->
-    <test started-at="2023-07-28T20:53:48 EEST" name="Regression" finished-at="2023-07-28T20:53:58 EEST" duration-ms="9744">
+    <test started-at="2023-08-26T19:27:58 EEST" name="Regression" finished-at="2023-08-26T19:27:58 EEST" duration-ms="5">
       <class name="testcases.AssertionsSoft">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:48 EEST" name="setUp" finished-at="2023-07-28T20:53:49 EEST" duration-ms="1077" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="NotExpectedTheSameSizeOfRolesInDropDownList()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:49 EEST" name="NotExpectedTheSameSizeOfRolesInDropDownList" finished-at="2023-07-28T20:53:50 EEST" duration-ms="1466" status="FAIL">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+        <test-method signature="ValidateError()[pri:1, instance:testcases.AssertionsSoft@1a451d4d]" started-at="2023-08-26T19:27:58 EEST" name="ValidateError" finished-at="2023-08-26T19:27:58 EEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Error communicating with the remote browser. It may have died.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, get {url=http://test.my-fork.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996]]>
+              <![CDATA[Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, get {url=http://test.my-fork.com}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-at pageobjects.HomePage.openWebSite(HomePage.java:27)
-at testcases.AssertionsSoft.NotExpectedTheSameSizeOfRolesInDropDownList(AssertionsSoft.java:30)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null
+at testcases.AssertionsSoft.ValidateError(AssertionsSoft.java:41)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -555,541 +126,22 @@ at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 at java.base/java.lang.Thread.run(Thread.java:1623)
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 16 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-... 1 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NotExpectedTheSameSizeOfRolesInDropDownList -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:50 EEST" duration-ms="59" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Timed out waiting for driver server to stop.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:148)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:445)
-at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:279)
-at testcases.BaseTest.closeBrowser(BaseTest.java:44)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-Caused by: java.util.concurrent.ExecutionException: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:144)
-... 24 more
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:121)
-at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-... 3 more
-Caused by: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
-at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
-at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
-at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
-at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
-at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-... 1 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-Caused by: java.net.ConnectException: Connection refused: no further information
-at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:673)
-at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
-at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="setUp" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="ValidateError()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="ValidateError" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Timed out waiting for driver server to stop.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:148)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:445)
-at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:279)
-at testcases.BaseTest.closeBrowser(BaseTest.java:44)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-Caused by: java.util.concurrent.ExecutionException: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:144)
-... 24 more
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:121)
-at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-... 3 more
-Caused by: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
-at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
-at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
-at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
-at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
-at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-... 1 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-Caused by: java.net.ConnectException: Connection refused: no further information
-at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:673)
-at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
-at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateError -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="setUp" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="WebSiteTitle()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="WebSiteTitle" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Timed out waiting for driver server to stop.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:148)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:445)
-at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:279)
-at testcases.BaseTest.closeBrowser(BaseTest.java:44)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-Caused by: java.util.concurrent.ExecutionException: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:144)
-... 24 more
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:121)
-at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-... 3 more
-Caused by: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
-at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
-at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
-at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
-at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
-at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-... 1 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-Caused by: java.net.ConnectException: Connection refused: no further information
-at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:673)
-at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
-at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WebSiteTitle -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="setUp" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="wrongWebSiteTitle()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="wrongWebSiteTitle" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Timed out waiting for driver server to stop.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [870c492f7b5a7ebbd5b78f8b00d3b996, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53532}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53532/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 870c492f7b5a7ebbd5b78f8b00d3b996
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:148)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:445)
-at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:279)
-at testcases.BaseTest.closeBrowser(BaseTest.java:44)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-Caused by: java.util.concurrent.ExecutionException: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:144)
-... 24 more
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:121)
-at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-... 3 more
-Caused by: java.net.ConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
-at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
-at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
-at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
-at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
-at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
-at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
-at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-... 1 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/[0:0:0:0:0:0:0:1]:40087
-Caused by: java.net.ConnectException: Connection refused: no further information
-at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:673)
-at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
-at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wrongWebSiteTitle -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.AssertionsSoft@14dd9eb7]" started-at="2023-07-28T20:53:50 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:50 EEST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- testcases.AssertionsSoft -->
-      <class name="testcases.HardAssert">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:48 EEST" name="setUp" finished-at="2023-07-28T20:53:49 EEST" duration-ms="944" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="SizeOfRolesInDropDownList()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:49 EEST" name="SizeOfRolesInDropDownList" finished-at="2023-07-28T20:53:52 EEST" duration-ms="3624" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SizeOfRolesInDropDownList -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:52 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:53 EEST" duration-ms="123" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:53 EEST" name="setUp" finished-at="2023-07-28T20:53:53 EEST" duration-ms="868" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="ValidateError()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:53 EEST" name="ValidateError" finished-at="2023-07-28T20:53:55 EEST" duration-ms="1209" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+      <class name="testcases.DriverInteractions">
+        <test-method signature="scrollTest()[pri:4, instance:testcases.DriverInteractions@7fa98a66]" started-at="2023-08-26T19:27:58 EEST" name="scrollTest" finished-at="2023-08-26T19:27:58 EEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6d89de718979ed08bf747513b333b2a0, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53610}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53610/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6d89de718979ed08bf747513b333b2a0]]>
+              <![CDATA[Cannot read field "webSiteURL" because "this.homePage" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6d89de718979ed08bf747513b333b2a0, findElement {using=xpath, value=//div[@class='home-menu-block']//div[@class='menu']//a[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53610}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53610/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6d89de718979ed08bf747513b333b2a0
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pageobjects.HomePage.clickSignIn(HomePage.java:21)
-at testcases.HardAssert.ValidateError(HardAssert.java:45)
+              <![CDATA[java.lang.NullPointerException: Cannot read field "webSiteURL" because "this.homePage" is null
+at testcases.DriverInteractions.scrollTest(DriverInteractions.java:30)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -1105,143 +157,11 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:1623)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateError -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:55 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:55 EEST" duration-ms="128" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:55 EEST" name="setUp" finished-at="2023-07-28T20:53:56 EEST" duration-ms="912" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="WebSiteTitle()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:56 EEST" name="WebSiteTitle" finished-at="2023-07-28T20:53:56 EEST" duration-ms="456" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [40839a4b27a51e915ff7c8399d501bb9, getTitle {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53651}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53651/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 40839a4b27a51e915ff7c8399d501bb9]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [40839a4b27a51e915ff7c8399d501bb9, getTitle {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53651}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53651/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 40839a4b27a51e915ff7c8399d501bb9
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:302)
-at testcases.HardAssert.WebSiteTitle(HardAssert.java:26)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WebSiteTitle -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:56 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:56 EEST" duration-ms="120" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:56 EEST" name="setUp" finished-at="2023-07-28T20:53:57 EEST" duration-ms="780" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="wrongWebSiteTitle()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:57 EEST" name="wrongWebSiteTitle" finished-at="2023-07-28T20:53:57 EEST" duration-ms="438" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6eb78e193091544f38673668964acf13, getTitle {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53692}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53692/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6eb78e193091544f38673668964acf13]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6eb78e193091544f38673668964acf13, getTitle {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\opylypiv\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53692}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53692/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6eb78e193091544f38673668964acf13
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:302)
-at testcases.HardAssert.wrongWebSiteTitle(HardAssert.java:57)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wrongWebSiteTitle -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.HardAssert@795cd85e]" started-at="2023-07-28T20:53:57 EEST" name="closeBrowser" finished-at="2023-07-28T20:53:58 EEST" duration-ms="127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- testcases.HardAssert -->
+        </test-method> <!-- scrollTest -->
+      </class> <!-- testcases.DriverInteractions -->
     </test> <!-- Regression -->
   </suite> <!-- Suite1 -->
 </testng-results>

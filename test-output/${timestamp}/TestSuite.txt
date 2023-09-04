@@ -1,8 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 86.068 s <<< FAILURE! - in TestSuite
-wrongWebSiteTitle(testcases.HardAssert)  Time elapsed: 3.079 s  <<< FAILURE!
-java.lang.AssertionError: expected [My Fork - your educational solution] but found [My Fork]
-	at testcases.HardAssert.wrongWebSiteTitle(HardAssert.java:59)
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.798 s <<< FAILURE! - in TestSuite
+fillEmailAndPasswordFiellsAndValidateCheckbox(testcases.FirstTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null
+	at testcases.FirstTest.openSignInPage(FirstTest.java:20)
+	at testcases.FirstTest.fillEmailAndPasswordFiellsAndValidateCheckbox(FirstTest.java:52)
+
+validateRolesInDropDown(testcases.FirstTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pageobjects.HomePage.openWebSite()" because "this.homePage" is null
+	at testcases.FirstTest.openWebSite(FirstTest.java:16)
+	at testcases.FirstTest.validateRolesInDropDown(FirstTest.java:63)
+
+ValidateErrorWithWaiting(testcases.FirstTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null
+	at testcases.FirstTest.fillEmailAndPasswordFiells(FirstTest.java:31)
+	at testcases.FirstTest.fillEmailAndPasswordFiellsAndPressLoginBtn(FirstTest.java:38)
+	at testcases.FirstTest.ValidateErrorWithWaiting(FirstTest.java:77)
+
+ValidateError(testcases.AssertionsSoft)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pageobjects.HomePage.clickSignIn()" because "this.homePage" is null
+	at testcases.AssertionsSoft.ValidateError(AssertionsSoft.java:41)
+
+scrollTest(testcases.DriverInteractions)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot read field "webSiteURL" because "this.homePage" is null
+	at testcases.DriverInteractions.scrollTest(DriverInteractions.java:30)
 
