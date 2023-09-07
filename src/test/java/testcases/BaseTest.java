@@ -24,7 +24,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp () throws IOException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\opylypiv\\Desktop\\TestFrameworkAuto\\src\\test\\resources\\executables\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/opylypiv/Documents/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
@@ -52,7 +52,7 @@ public class BaseTest {
 
     public void savelogs(Logger log) throws IOException {
         FileHandler fileHandler;
-        fileHandler = new FileHandler("C:\\Users\\opylypiv\\Desktop\\TestFrameworkAuto\\MyLogs.log");
+        fileHandler = new FileHandler("/home/opylypiv/Documents/MyLogs.log");
         log.addHandler(fileHandler);
         SimpleFormatter formatter = new SimpleFormatter();
         fileHandler.setFormatter(formatter);
